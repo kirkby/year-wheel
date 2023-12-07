@@ -1,0 +1,122 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Årshjul</title>
+        <link rel="stylesheet" href="./style.css">
+        </link>
+    </head>
+
+    <body>
+        <div class="inputs">
+            <section class="general-inputs">
+                <div class="general-input">
+                    <label>Titel</label>
+                    <input class="title-input" onChange="(e) => setTitle(e)" value="[Indsæt titel]"></input>
+                </div>
+                <div class="general-input">
+                    <label>År</label>
+                    <select class="year-select" value="2023">
+                        <option value="2022">2022</option>
+                        <option selected value="2023">2023</option>
+                    </select>
+                </div>
+                <div class="general-input">
+                    <label>Farver</label>
+                    <div class="color-inputs">
+                        <input class="color-input" type="button" />
+                        <input class="color-input" type="button" />
+                        <input class="color-input" type="button" />
+                        <input class="color-input" type="button" />
+                        <input class="color-input" type="button" />
+                        <input class="color-input" type="button" />
+                        <input class="color-input" type="button" />
+                        <input class="color-input" type="button" />
+                    </div>
+                </div>
+            </section>
+            <div class="divider row"></div>
+            <section class="ring-inputs">
+                <div class="rings-sidebar">
+                    <div class="rings">
+                    </div>
+                    <button class="add-ring-button" onClick="addRing()">Tilføj ring</button>
+                    <button class="delete-ring-button" onClick="deleteRing()">Slet ring</button>
+                </div>
+                <div class="ring-textareas-wrapper">
+                    <div class="ring-textareas">
+                        <div class="ring-textarea">
+                            <label>Januar</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="ring-textarea">
+                            <label>Februar</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="ring-textarea">
+                            <label>Marts</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="ring-textarea">
+                            <label>April</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="ring-textarea">
+                            <label>Maj</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="ring-textarea">
+                            <label>Juni</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="ring-textarea">
+                            <label>Juli</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="ring-textarea">
+                            <label>August</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="ring-textarea">
+                            <label>September</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="ring-textarea">
+                            <label>Oktober</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="ring-textarea">
+                            <label>November</label>
+                            <textarea></textarea>
+                        </div>
+                        <div class="ring-textarea">
+                            <label>December</label>
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="divider row"></div>
+            <section class="action-inputs">
+                <button onClick="saveData()">Gem</button>
+                <button onClick="generateYearWheel()">Generér</button>
+                <button type="submit" onClick="resetData()">Nulstil</button>
+                <a class="button download-button" download="Årshjul.png">Download som .png</a>
+            </section>
+        </div>
+        <div>
+            <div class="year-wheel-wrapper">
+                <div class="year-wheel">
+                    <canvas></canvas>
+                </div>
+                <div class="zoom-buttons">
+                    <button class="zoom-button" onClick="zoom(11/10)">+</button>
+                    <button class="zoom-button" onClick="zoom(10/11)">-</button>
+                </div>
+            </div>
+        </div>
+        <script src="./year-wheel.js"></script>
+        <script src="./script.js"></script>
+    </body>
+
+</html>
